@@ -63,4 +63,5 @@ public class BodyPartsFragment extends Fragment implements AdapterView.OnItemCli
     public interface OnImageClickListener {
         void onImageSelected(int position);
     }
+
 }

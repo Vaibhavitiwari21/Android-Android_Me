@@ -8,27 +8,44 @@ The second FrameLayout is for the CombinedImageFragment.
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:weightSum="2">
+    android:orientation="vertical">
 
-    <!-- Fragment container for the body parts -->
-    <FrameLayout
-        android:id="@+id/body_parts_fragment"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
+    <!-- New Button for random selection -->
+    <Button
+        android:id="@+id/random_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Random"/>
 
-    <!-- Divider -->
-    <View
-        android:layout_width="1dp"
-        android:layout_height="match_parent"
-        android:background="@android:color/darker_gray"/>
+    <!-- Horizontal LinearLayout with two FrameLayouts and a View acting as a divider -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_weight="1">
 
-    <!-- Fragment container for the combined image -->
-    <FrameLayout
-        android:id="@+id/combined_image_fragment"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        <!-- Fragment container for the body parts -->
+        <FrameLayout
+            android:id="@+id/body_parts_fragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+        <!-- Fragment container for the combined image -->
+        <FrameLayout
+            android:id="@+id/combined_image_fragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
 
 </LinearLayout>
