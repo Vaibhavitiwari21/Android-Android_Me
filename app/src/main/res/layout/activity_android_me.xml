@@ -1,0 +1,34 @@
+<!--
+This is the layout file for the main activity.
+It contains a horizontal LinearLayout with two FrameLayouts and a View acting as a divider.
+The first FrameLayout is for the BodyPartsFragment.
+The second FrameLayout is for the CombinedImageFragment.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
+    <!-- Fragment container for the body parts -->
+    <FrameLayout
+        android:id="@+id/body_parts_fragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"/>
+
+    <!-- Fragment container for the combined image -->
+    <FrameLayout
+        android:id="@+id/combined_image_fragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+</LinearLayout>
